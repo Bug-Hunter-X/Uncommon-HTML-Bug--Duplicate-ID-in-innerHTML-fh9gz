@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    // Incorrectly using innerHTML to add an element
+    document.getElementById("myDiv").innerHTML += "<p>This is another paragraph.</p>";
+
+    //This will result in unexpected behavior since the id is added twice in the DOM
+    document.getElementById("myDiv").innerHTML += "<p id = 'myDiv'>This is another paragraph.</p>"; 
+  </script>
+</body>
+</html>
