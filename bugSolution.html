@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    // Correct way to add a new paragraph using DOM manipulation
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "This is another paragraph.";
+    document.getElementById("myDiv").appendChild(newParagraph);
+    
+    // Correct way to add a new paragraph using DOM manipulation and ID
+    const newParagraphWithId = document.createElement("p");
+    newParagraphWithId.textContent = "This is another paragraph with ID.";
+    newParagraphWithId.id = "newParagraph";
+    document.getElementById("myDiv").appendChild(newParagraphWithId);
+  </script>
+</body>
+</html>
